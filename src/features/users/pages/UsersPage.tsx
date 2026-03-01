@@ -150,11 +150,10 @@ export default function UsersPage() {
       apiGetUsers({
         page,
         limit,
-        email: email || undefined,
-        name: name || undefined,
-        status: status || undefined,
+        email,
+        name,
+        status,
       }),
-    // queryFn: () => new Promise(() => {}), // 永不 resolve
     placeholderData: keepPreviousData,
   });
 
