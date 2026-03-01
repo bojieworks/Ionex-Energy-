@@ -20,8 +20,8 @@ export default function LoginPage() {
   const isAuthed = authStore((auth) => auth.getIsAuthenticated());
   const login = authStore((auth) => auth.login);
 
-  const [username, setUsername] = useState("admin");
-  const [password, setPassword] = useState("password123");
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [errMsg, setErrMsg] = useState<string | null>(null);
 

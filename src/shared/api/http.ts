@@ -15,7 +15,6 @@ export type ApiError = {
 const baseURL = import.meta.env.VITE_API_BASE_URL;
 if (!baseURL) throw new Error("VITE_API_BASE_URL is not defined!");
 
-// Prevent multiple refreshes; share a single in-flight promise
 let isRefreshing = false;
 let refreshPromise: Promise<string | null> | null = null;
 const TOKEN_EXPIRED_CODE = "TOKEN_EXPIRED";
